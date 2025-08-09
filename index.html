@@ -18,8 +18,8 @@
           data-passwordDisplay
         />
 
-        <button data-copy>
-          <span data-copyMsg> </span>
+        <button data-copy class="copy">
+          <span class="tooltip" data-copyMsg> </span>
           <img src="./assets/copy.svg" alt="copy" width="23" height="23" />
         </button>
       </div>
@@ -41,22 +41,22 @@
         />
 
         <!-- checkBox -->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes Uppercase leters</label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowercase leters</label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes numbers</label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes symbols</label>
         </div>
@@ -65,12 +65,15 @@
         <p >Strength</p>
         <div  class="indicator" data-indicator> </div>
       </div>
+
+            <!-- Generate PassWord -->
+      <button class="generateButton">Generate Password</button>
+       
       </div>
 
      
 
-      <!-- Generate PassWord -->
-      <button class="generateButton">Generate Password</button>
+
     </div>
 
     <script src="script.js"></script>
