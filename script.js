@@ -46,6 +46,10 @@ function generateRandomInteger() {
 
 function generateUpperCase() {
   return String.fromCharCode(getRndInteger(65, 91));
+  // String.fromCharCode(number) converts that number into the actual character.
+  // using ASCII
+
+
 }
 
 function generateLowerCase() {
@@ -55,6 +59,9 @@ function generateLowerCase() {
 function generateSymbol() {
   let randNum = getRndInteger(0, symbols.length);
   return symbols.charAt(randNum);
+  // .charAt() is a string method in JavaScript that returns
+  //  the character at a specific index (position) in a string.
+
 }
 
 function calcStrength() {
@@ -101,7 +108,8 @@ inputSlider.addEventListener("input", (itr) => {
 });
 
 copyBtn.addEventListener("click", (itr) => {
-  if (passwordDisplay.value) copyContent();
+  if (passwordDisplay.value) 
+  copyContent();
 });
 
 function shufflePassword(array) {
@@ -113,14 +121,15 @@ function shufflePassword(array) {
     array[j] = temp;
   }
   let str = "";
-  array.forEach((el) => (str += el));
+  array.forEach((element) => (str += element));
   return str;
 }
 
 function handleCheckBoxChange() {
   checkCount = 0;
   allCheckBox.forEach((checkbox) => {
-    if (checkbox.checked) checkCount++;
+    if (checkbox.checked) 
+      checkCount++;
   });
 
   // special condition
@@ -213,11 +222,13 @@ generateBtn.addEventListener("click", () => {
     let randIndex = getRndInteger(0, funcArr.length);
     password += funcArr[randIndex]();
   }
-  console.log("remaining addition done");
+  console.log("remaining addition done"); 
 
   // shuffle password
 
   password = shufflePassword(Array.from(password));
+  // Array.from() takes that string and turns it into an array of its characters.
+  // strings in JavaScript are immutable — you can’t swap characters around directly, but you can shuffle an array.
   console.log("shuffling  done");
 
   // show in Ui
